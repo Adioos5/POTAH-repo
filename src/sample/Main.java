@@ -30,7 +30,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        System.out.println("chuj");
+        
     }
 
     public Pane createMenu(){
