@@ -41,24 +41,37 @@ public class Main extends Application {
         play.setPrefWidth(200);
         play.setTranslateX(100);
         play.setTranslateY(150);
+        play.setOnMouseClicked(event -> {
+            createNewGameWindow();
+        });
 
         Button load = new Button("Load game");
         load.setPrefHeight(50);
         load.setPrefWidth(200);
         load.setTranslateX(100);
         load.setTranslateY(250);
+        load.setOnMouseClicked(event -> {
+            createLoadGameWindow();
+        });
 
         Button settings = new Button("Settings");
         settings.setPrefHeight(50);
         settings.setPrefWidth(200);
         settings.setTranslateX(100);
         settings.setTranslateY(350);
+        settings.setOnMouseClicked(event -> {
+            createSettingsWindow();
+        });
 
         Button quit = new Button("Quit game");
         quit.setPrefHeight(50);
         quit.setPrefWidth(200);
         quit.setTranslateX(100);
         quit.setTranslateY(450);
+
+        quit.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
 
         root.getChildren().add(play);
         root.getChildren().add(load);
@@ -67,4 +80,15 @@ public class Main extends Application {
 
         return root;
     }
+
+    private void createNewGameWindow(){
+        root.getChildren().clear();
+    }
+    private void createLoadGameWindow(){
+        root.getChildren().clear();
+    }
+    private void createSettingsWindow(){
+        root.getChildren().clear();
+    }
+
 }
